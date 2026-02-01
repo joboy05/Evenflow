@@ -35,7 +35,7 @@ const PageTransition = ({ children }) => {
         <>
             {/* Progress Bar */}
             <motion.div
-                className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 z-[9999]"
+                className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-red-500 via-red-600 to-red-800 z-[9999]"
                 initial={{ width: "0%" }}
                 animate={{ width: loading ? "70%" : "100%" }}
                 transition={{ duration: 0.5 }}
@@ -64,7 +64,7 @@ const PageTransition = ({ children }) => {
                         className="fixed inset-0 z-[9998] bg-white/90 backdrop-blur-md flex items-center justify-center"
                     >
                         <div className="flex flex-col items-center">
-                            <Loader2 className="w-12 h-12 text-blue-600 animate-spin mb-4" />
+                            <Loader2 className="w-12 h-12 text-red-600 animate-spin mb-4" />
                             <p className="text-dark font-black uppercase tracking-widest text-[10px]">Chargement...</p>
                         </div>
                     </motion.div>

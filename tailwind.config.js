@@ -7,22 +7,33 @@ export default {
     theme: {
         extend: {
             colors: {
+                // Theme Principal: Rouge, Blanc, Noir
                 primary: {
-                    DEFAULT: '#2563eb',
-                    50: '#eff6ff',
-                    100: '#dbeafe',
-                    200: '#bfdbfe',
-                    300: '#93c5fd',
-                    400: '#60a5fa',
-                    500: '#3b82f6',
-                    600: '#2563eb',
-                    700: '#1d4ed8',
-                    800: '#1e40af',
-                    900: '#1e3a8a',
+                    DEFAULT: '#DC2626', // Rouge vif (red-600)
+                    50: '#FEF2F2',
+                    100: '#FEE2E2',
+                    200: '#FECACA',
+                    300: '#FCA5A5',
+                    400: '#F87171',
+                    500: '#EF4444',
+                    600: '#DC2626', // Principal
+                    700: '#B91C1C',
+                    800: '#991B1B',
+                    900: '#7F1D1D',
                 },
                 dark: {
-                    DEFAULT: '#0F172A',
-                    soft: '#1E293B',
+                    DEFAULT: '#1C1C1C', // Noir chaud premium
+                    50: '#F8F8F8',
+                    100: '#F0F0F0',
+                    200: '#E4E4E4',
+                    300: '#D1D1D1',
+                    400: '#B4B4B4',
+                    500: '#9A9A9A',
+                    600: '#818181',
+                    700: '#6A6A6A',
+                    800: '#2E2E2E',
+                    900: '#1C1C1C', // Principal
+                    soft: '#2E2E2E',
                 }
             },
             fontFamily: {
@@ -58,12 +69,12 @@ export default {
                     '100%': { transform: 'translateY(0)', opacity: '1' },
                 },
                 glow: {
-                    '0%, 100%': { textShadow: '0 0 10px rgba(37, 99, 235, 0.2)' },
-                    '50%': { textShadow: '0 0 25px rgba(37, 99, 235, 0.5)' },
+                    '0%, 100%': { textShadow: '0 0 10px rgba(220, 38, 38, 0.2)' },
+                    '50%': { textShadow: '0 0 25px rgba(220, 38, 38, 0.5)' },
                 },
                 'glow-soft': {
-                    '0%, 100%': { filter: 'drop-shadow(0 0 10px rgba(37, 99, 235, 0.2))' },
-                    '50%': { filter: 'drop-shadow(0 0 25px rgba(37, 99, 235, 0.5))' },
+                    '0%, 100%': { filter: 'drop-shadow(0 0 10px rgba(220, 38, 38, 0.2))' },
+                    '50%': { filter: 'drop-shadow(0 0 25px rgba(220, 38, 38, 0.5))' },
                 },
                 gradient: {
                     '0%': { backgroundPosition: '0% 50%' },

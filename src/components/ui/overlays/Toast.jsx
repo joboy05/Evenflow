@@ -57,7 +57,7 @@ const ToastContainer = ({ toasts, removeToast }) => {
             case 'success': return 'bg-gradient-to-r from-green-500 to-emerald-600';
             case 'error': return 'bg-gradient-to-r from-red-500 to-rose-600';
             case 'warning': return 'bg-gradient-to-r from-yellow-500 to-amber-600';
-            case 'info': return 'bg-gradient-to-r from-blue-500 to-indigo-600';
+            case 'info': return 'bg-gradient-to-r from-gray-800 to-black border border-white/10';
             default: return 'bg-gradient-to-r from-gray-600 to-gray-700';
         }
     };
@@ -67,7 +67,7 @@ const ToastContainer = ({ toasts, removeToast }) => {
             case 'success': return 'text-green-100';
             case 'error': return 'text-red-100';
             case 'warning': return 'text-yellow-100';
-            case 'info': return 'text-blue-100';
+            case 'info': return 'text-gray-100';
             default: return 'text-gray-100';
         }
     };

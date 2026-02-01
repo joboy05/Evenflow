@@ -64,7 +64,7 @@ const EventDetailPage = () => {
                         <ArrowLeft className="w-6 h-6" />
                     </button>
                     <div className="flex gap-4">
-                        <button className="p-4 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl text-white hover:bg-pink-500 hover:border-pink-500 transition-all shadow-2xl">
+                        <button className="p-4 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl text-white hover:bg-red-500 hover:border-red-500 transition-all shadow-2xl">
                             <Heart className="w-6 h-6" />
                         </button>
                         <button className="p-4 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl text-white hover:bg-primary hover:border-primary transition-all shadow-2xl">

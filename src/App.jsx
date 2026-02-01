@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import { ToastProvider } from './components/ui/overlays/Toast';
 import Navbar from './components/layout/Navbar/Navbar';
+import Newsletter from './components/layout/Newsletter/Newsletter'; // Import du nouveau composant
 import Footer from './components/layout/Footer/Footer';
 import PageTransition from './components/layout/PageTransition/PageTransition';
 import CartDrawer from './components/features/cart/CartDrawer';
@@ -23,6 +24,13 @@ const App = () => {
                   <AppRoutes />
                 </PageTransition>
               </main>
+
+              {/* Newsletter Section - Ajoutée avec espacement */}
+              <div className="py-24 bg-white">
+                <Newsletter />
+              </div>
+
+              {/* Footer Principal */}
               <Footer />
             </div>
           </ToastProvider>

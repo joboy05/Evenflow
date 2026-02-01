@@ -83,7 +83,7 @@ const CartDrawer = () => {
                         <div className="flex items-center justify-between p-6 border-b border-gray-100">
                             <div className="flex items-center space-x-3">
                                 <div className="relative">
-                                    <ShoppingBag className="w-6 h-6 text-blue-600" />
+                                    <ShoppingBag className="w-6 h-6 text-red-600" />
                                     {cartCount > 0 && (
                                         <motion.span
                                             initial={{ scale: 0 }}
@@ -113,7 +113,7 @@ const CartDrawer = () => {
                         {/* Empty State */}
                         {cart.length === 0 ? (
                             <div className="flex flex-col items-center justify-center h-[60vh] p-8">
-                                <div className="w-24 h-24 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl flex items-center justify-center mb-6">
+                                <div className="w-24 h-24 bg-gradient-to-br from-red-50 to-gray-50 rounded-2xl flex items-center justify-center mb-6">
                                     <ShoppingBag className="w-12 h-12 text-gray-300" />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">Panier vide</h3>
@@ -122,7 +122,7 @@ const CartDrawer = () => {
                                 </p>
                                 <button
                                     onClick={() => setIsCartOpen(false)}
-                                    className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-xl hover:shadow-lg transition-shadow"
+                                    className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white font-medium rounded-xl hover:shadow-lg transition-shadow"
                                 >
                                     Explorer les événements
                                 </button>
@@ -138,7 +138,7 @@ const CartDrawer = () => {
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ delay: index * 0.1 }}
-                                                className="flex items-start space-x-4 p-4 rounded-2xl border border-gray-100 hover:border-blue-200 transition-colors group"
+                                                className="flex items-start space-x-4 p-4 rounded-2xl border border-gray-100 hover:border-red-200 transition-colors group"
                                             >
                                                 {/* Event Image */}
                                                 <div className="relative flex-shrink-0">
@@ -147,7 +147,7 @@ const CartDrawer = () => {
                                                         alt={item.event.title}
                                                         className="w-20 h-20 rounded-xl object-cover"
                                                     />
-                                                    <div className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
+                                                    <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full">
                                                         x{item.quantity}
                                                     </div>
                                                 </div>
@@ -206,7 +206,7 @@ const CartDrawer = () => {
                                     </div>
 
                                     {/* Trust Badges */}
-                                    <div className="mt-8 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl border border-green-100">
+                                    <div className="mt-8 p-4 bg-gray-50 rounded-2xl border border-gray-100">
                                         <div className="flex items-center space-x-3">
                                             <div className="p-2 bg-white rounded-lg shadow-sm">
                                                 <Lock className="w-5 h-5 text-green-600" />
@@ -245,7 +245,7 @@ const CartDrawer = () => {
                                     {/* Actions */}
                                     <div className="space-y-3">
                                         <button className="
-                      w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 
+                      w-full py-4 bg-gradient-to-r from-red-600 to-red-500 
                       text-white font-bold rounded-xl hover:shadow-xl 
                       transform hover:-translate-y-0.5 transition-all duration-300
                       flex items-center justify-center space-x-2
@@ -263,7 +263,7 @@ const CartDrawer = () => {
 
                                         <button
                                             onClick={() => setIsCartOpen(false)}
-                                            className="w-full py-3 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                                            className="w-full py-3 text-red-600 hover:text-red-700 font-medium transition-colors"
                                         >
                                             Continuer mes achats
                                         </button>
@@ -273,10 +273,10 @@ const CartDrawer = () => {
                                     <div className="mt-6 pt-6 border-t border-gray-100">
                                         <p className="text-sm text-gray-500 mb-3">Moyens de paiement acceptés</p>
                                         <div className="flex items-center space-x-4">
-                                            <div className="w-10 h-6 bg-blue-100 rounded"></div>
-                                            <div className="w-10 h-6 bg-green-100 rounded"></div>
-                                            <div className="w-10 h-6 bg-yellow-100 rounded"></div>
-                                            <div className="w-10 h-6 bg-purple-100 rounded"></div>
+                                            <div className="w-10 h-6 bg-gray-100 rounded"></div>
+                                            <div className="w-10 h-6 bg-gray-200 rounded"></div>
+                                            <div className="w-10 h-6 bg-gray-100 rounded"></div>
+                                            <div className="w-10 h-6 bg-gray-200 rounded"></div>
                                             <span className="text-xs text-gray-400">+4 autres</span>
                                         </div>
                                     </div>

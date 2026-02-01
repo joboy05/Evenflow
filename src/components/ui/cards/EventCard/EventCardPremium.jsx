@@ -70,7 +70,7 @@ const EventCardPremium = ({ event, onClick }) => {
         const colors = {
             festival: { bg: 'bg-orange-100', text: 'text-orange-800', border: 'border-orange-200' },
             concert: { bg: 'bg-purple-100', text: 'text-purple-800', border: 'border-purple-200' },
-            conference: { bg: 'bg-blue-100', text: 'text-blue-800', border: 'border-blue-200' },
+            conference: { bg: 'bg-gray-100', text: 'text-gray-800', border: 'border-gray-200' },
             culture: { bg: 'bg-green-100', text: 'text-green-800', border: 'border-green-200' },
             sport: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-200' },
         };
@@ -98,8 +98,8 @@ const EventCardPremium = ({ event, onClick }) => {
             {/* Card Container */}
             <div className="
         relative bg-white rounded-3xl overflow-hidden border border-gray-200 
-        shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-blue-500/20
-        transition-shadow duration-500
+        shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-red-500/20
+        transition-all duration-500
       ">
                 {/* Image Container with Parallax Effect */}
                 <div className="relative h-64 overflow-hidden">
@@ -188,7 +188,7 @@ const EventCardPremium = ({ event, onClick }) => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-red-600 transition-colors">
                         {event.title}
                     </h3>
 
@@ -210,7 +210,7 @@ const EventCardPremium = ({ event, onClick }) => {
                                 <p className="text-sm font-medium">{event.organizer.name}</p>
                             </div>
                             {event.organizer.verified && (
-                                <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
+                                <div className="w-5 h-5 bg-red-600 rounded-full flex items-center justify-center">
                                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                     </svg>
@@ -265,7 +265,7 @@ const EventCardPremium = ({ event, onClick }) => {
                 flex items-center justify-center space-x-2
                 ${isSoldOut
                                     ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                                    : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-xl'
+                                    : 'bg-gradient-to-r from-red-600 to-red-500 text-white hover:shadow-xl'
                                 }
               `}
                         >
@@ -287,13 +287,13 @@ const EventCardPremium = ({ event, onClick }) => {
                 {/* Hover Effect Border */}
                 <div className="
           absolute inset-0 border-2 border-transparent 
-          group-hover:border-blue-400/50 rounded-3xl 
+          group-hover:border-red-400/50 rounded-3xl 
           transition-all duration-500 pointer-events-none
         " />
 
                 {/* 3D Shadow Effect */}
                 <div className="
-          absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 
+          absolute -inset-1 bg-gradient-to-r from-red-500 to-red-700 
           rounded-3xl opacity-0 group-hover:opacity-10 blur-xl 
           transition-opacity duration-500 -z-10
         " />

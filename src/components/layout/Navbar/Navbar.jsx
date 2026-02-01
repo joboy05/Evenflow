@@ -27,7 +27,6 @@ const Navbar = () => {
 
     const navLinks = [
         { path: 'home', label: 'Accueil' },
-        { path: 'vision', label: 'Vision' },
         { path: 'selection', label: 'Sélection' },
         { path: 'about', label: 'À Propos' },
         { path: 'testimonials', label: 'Témoignages' },
@@ -51,9 +50,9 @@ const Navbar = () => {
     return (
         <>
             <nav className={`
-        fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        fixed top-0 left-0 right-0 z-50 transition-all duration-500
         ${isScrolled
-                    ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-gray-200/20 py-3'
+                    ? 'bg-white/80 backdrop-blur-2xl shadow-xl shadow-gray-900/5 py-3 border-b border-gray-100/50'
                     : 'bg-white py-5'
                 }
         text-dark
@@ -66,10 +65,10 @@ const Navbar = () => {
                             onClick={() => handleNavClick('home')}
                             className="flex items-center gap-2.5 group cursor-pointer"
                         >
-                            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:scale-105 transition-transform duration-300">
+                            <div className="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform duration-300">
                                 <Ticket className="w-5 h-5 text-white" />
                             </div>
-                            <h1 className="text-2xl font-black tracking-tighter uppercase italic text-blue-600 leading-none">
+                            <h1 className="text-2xl font-black tracking-tighter uppercase italic text-red-600 leading-none">
                                 EvenFlow
                             </h1>
                         </div>
@@ -80,7 +79,7 @@ const Navbar = () => {
                                 <button
                                     key={link.path}
                                     onClick={() => handleNavClick(link.path)}
-                                    className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-blue-600 transition-colors"
+                                    className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-red-600 transition-colors"
                                 >
                                     {link.label}
                                 </button>
@@ -92,7 +91,7 @@ const Navbar = () => {
                             {/* Search */}
                             <button
                                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                                className="hidden md:block p-2 text-gray-400 hover:text-blue-600 transition-colors"
+                                className="hidden md:block p-2 text-gray-400 hover:text-red-600 transition-colors"
                             >
                                 <Search className="w-5 h-5" />
                             </button>
@@ -100,11 +99,11 @@ const Navbar = () => {
                             {/* Cart */}
                             <button
                                 onClick={() => setIsCartOpen(true)}
-                                className="relative p-2 text-gray-400 hover:text-blue-600 transition-colors"
+                                className="relative p-2 text-gray-400 hover:text-red-600 transition-colors"
                             >
                                 <ShoppingBag className="w-5 h-5" />
                                 {cartCount > 0 && (
-                                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-blue-600 text-white text-[9px] font-bold rounded-full flex items-center justify-center">
+                                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-600 text-white text-[9px] font-bold rounded-full flex items-center justify-center">
                                         {cartCount}
                                     </span>
                                 )}
@@ -116,7 +115,7 @@ const Navbar = () => {
                             ) : (
                                 <Link
                                     to="/login"
-                                    className="px-6 py-2.5 bg-blue-600 text-white font-bold rounded-xl text-xs hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 transition-all"
+                                    className="px-6 py-2.5 bg-red-600 text-white font-bold rounded-xl text-xs hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/20 transition-all"
                                 >
                                     Connexion
                                 </Link>
@@ -152,7 +151,7 @@ const Navbar = () => {
                         <div className="mt-auto pb-10">
                             <Link
                                 to="/login"
-                                className="block w-full py-4 bg-blue-600 text-white text-center font-bold rounded-2xl uppercase text-sm tracking-widest"
+                                className="block w-full py-4 bg-red-600 text-white text-center font-bold rounded-2xl uppercase text-sm tracking-widest"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Connexion

@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Reset & Typography */
+body {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  font-family: 'Plus Jakarta Sans', 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@layer components {
+
+  /* Glassmorphism A+ */
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl shadow-dark/5;
+  }
+
+  /* Cartes Premium */
+  .premium-card {
+    @apply glass-panel rounded-[2rem] p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/20;
+  }
+
+  /* Boutons High-End */
+  .btn-premium {
+    @apply relative px-8 py-4 bg-primary text-white rounded-2xl font-black text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 active:scale-95 overflow-hidden flex items-center justify-center gap-3;
+  }
+
+  .btn-premium::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full transition-transform duration-1000;
+  }
+
+  .btn-premium:hover::after {
+    @apply translate-x-full;
+  }
+
+  .btn-outline {
+    @apply px-8 py-4 bg-white/50 backdrop-blur-md text-dark border-2 border-slate-100 rounded-2xl font-black text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:bg-slate-50 hover:border-primary/20 flex items-center justify-center gap-3;
+  }
+
+  /* Badges Stylisés */
+  .premium-badge {
+    @apply px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-[10px] font-black uppercase tracking-[0.3em] inline-block;
+  }
+
+  /* Forms Premium */
+  .premium-input {
+    @apply w-full bg-slate-50 border-2 border-transparent rounded-2xl px-6 py-4 focus:outline-none focus:bg-white focus:border-primary/20 focus:ring-4 focus:ring-primary/5 transition-all text-dark font-bold placeholder:text-slate-300 shadow-inner;
+  }
+}
+
+/* Animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes glow-soft {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.2));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 25px rgba(37, 99, 235, 0.5));
+  }
+}
+
+.animate-glow-soft {
+  animation: glow-soft 4s ease-in-out infinite;
+}
+
+/* Gradients Custom */
+.bg-gradient-premium {
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.05), transparent),
+    radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.05), transparent);
+}
+
+/* src/styles/globals.css - Ajouter ces styles */
+
+/* Custom animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient text animation */
+.gradient-text-animate {
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Card hover effects */
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
